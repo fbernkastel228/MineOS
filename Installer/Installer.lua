@@ -22,7 +22,7 @@ if gpu.getDepth() < 8 and gpu.maxResolution() < 150 then table.insert(govno, "Ba
 --Проверяем оперативку
 --if math.floor(computer.totalMemory() / 1024 ) < 2048 then table.insert(govno, "Not enough RAM - this OS requires at least 2048 KB RAM.") end
 
-if fs.get("bin/edit.lua") == nil or fs.get("bin/edit.lua").isReadOnly() then table.insert(govno, "You can't install MineOS on floppy disk. Run \"install\" in command line and install OpenOS from floppy to HDD first. After that you're be able to install MineOS from Pastebin.") end
+if fs.get("bin/edit.lua") == nil or fs.get("bin/edit.lua").isReadOnly() then table.insert(govno, "You can't install MineOS on read-only disk. Run \"install\" in command line and install OpenOS from floppy to HDD first. After that you're be able to install MineOS from Pastebin.") end
 
 
 
@@ -120,9 +120,9 @@ local GitHubRAWUrl = "https://github.com/"
 
 local cyka
 print(" ")
-cyka = "colorlib.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/raw/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
-cyka = "image.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/raw/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
-cyka = "ECSAPI.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/raw/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
+cyka = "colorlib.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
+cyka = "image.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib" .. cyka, "lib/" .. cyka)
+cyka = "ECSAPI.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib" .. cyka, "lib/" .. cyka)
 print(" ")
 print("Initialising libraries")
 print(" ")
