@@ -214,7 +214,7 @@ if not fs.exists("MineOS/System/OS/Installer/OK.pic") or not fs.exists("MineOS/S
 
     if fs.exists(preLoadCodeApi[i]["path"]) then fs.remove(preLoadCodeApi[i]["path"]) end
     fs.makeDirectory(fs.path(preLoadCodeApi[i]["path"]))
-    getFromGitHubSafely(GitHubCodeUrl .. preLoadApi[i]["paste"], preLoadCodeApi[i]["path"])
+    getFromGitHubSafely(GitHubCodeUrl .. preLoadCodeApi[i]["paste"], preLoadCodeApi[i]["path"])
     
     if fs.exists(preLoadRAWApi[i]["path"]) then fs.remove(preLoadRAWApi[i]["path"]) end
     fs.makeDirectory(fs.path(preLoadRAWApi[i]["path"]))
