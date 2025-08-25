@@ -205,7 +205,7 @@ if not fs.exists("MineOS/System/OS/Installer/OK.pic") or not fs.exists("MineOS/S
     { paste = "fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/OS_Logo.pic", path = "MineOS/System/OS/Icons/OS_Logo.pic" },
   }
   
-  local countOfAll = #preLoadCodeApi
+  local countOfAll = #preLoadCodeApi + #preLoadRAWApi
 
   for i = 1, countOfAll do
 
