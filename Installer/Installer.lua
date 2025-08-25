@@ -119,9 +119,9 @@ local GitHubUserUrl = "https://raw.githubusercontent.com/"
 
 local cyka
 print(" ")
-cyka = "colorlib.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/lib/" .. cyka, "lib/" .. cyka)
-cyka = "image.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/lib/" .. cyka, "lib/" .. cyka)
-cyka = "ECSAPI.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/lib/" .. cyka, "lib/" .. cyka)
+cyka = "colorlib.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/master/lib/" .. cyka, "lib/" .. cyka)
+cyka = "image.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/master/lib/" .. cyka, "lib/" .. cyka)
+cyka = "ECSAPI.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/master/lib/" .. cyka, "lib/" .. cyka)
 print(" ")
 print("Initialising libraries")
 print(" ")
@@ -191,14 +191,14 @@ if not fs.exists("MineOS/System/OS/Installer/OK.pic") or not fs.exists("MineOS/S
   ecs.progressBar(xBar, yBar, barWidth, 1, 0xcccccc, ecs.colors.blue, 0)
   os.sleep(timing)
 
-  --local response = getSafe(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/Applications.txt", "MineOS/System/OS/Applications.txt")
+  --local response = getSafe(GitHubUserUrl .. "fbernkastel228/MineOS/master/Applications.txt", "MineOS/System/OS/Applications.txt")
   
   local preLoadApi = {
-    { paste = "IgorTimofeev/OpenComputers/master/lib/config.lua", path = "lib/config.lua" },
-    { paste = "IgorTimofeev/OpenComputers/master/MineOS/Icons/Languages.pic", path = "MineOS/System/OS/Icons/Languages.pic" },
-    { paste = "IgorTimofeev/OpenComputers/master/MineOS/Icons/OK.pic", path = "MineOS/System/OS/Icons/OK.pic" },
-    { paste = "IgorTimofeev/OpenComputers/master/MineOS/Icons/Downloading.pic", path = "MineOS/System/OS/Icons/Downloading.pic" },
-    { paste = "IgorTimofeev/OpenComputers/master/MineOS/Icons/OS_Logo.pic", path = "MineOS/System/OS/Icons/OS_Logo.pic" },
+    { paste = "fbernkastel228/MineOS/master/lib/config.lua", path = "lib/config.lua" },
+    { paste = "fbernkastel228/MineOS/master/MineOS/Icons/Languages.pic", path = "MineOS/System/OS/Icons/Languages.pic" },
+    { paste = "fbernkastel228/MineOS/master/MineOS/Icons/OK.pic", path = "MineOS/System/OS/Icons/OK.pic" },
+    { paste = "fbernkastel228/MineOS/master/MineOS/Icons/Downloading.pic", path = "MineOS/System/OS/Icons/Downloading.pic" },
+    { paste = "fbernkastel228/MineOS/master/MineOS/Icons/OS_Logo.pic", path = "MineOS/System/OS/Icons/OS_Logo.pic" },
   }
 
   local countOfAll = #preLoadApi
@@ -216,7 +216,7 @@ if not fs.exists("MineOS/System/OS/Installer/OK.pic") or not fs.exists("MineOS/S
 
 end
 
-applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
+applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
 
 _G.image = require("image")
 local config = require("config")
@@ -254,8 +254,8 @@ do
   --Качаем язык
   ecs.info("auto", "auto", " ", " Installing language packages...")
   local pathToLang = "MineOS/System/OS/Installer/Language.lang"
-  getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/Installer/" .. _G._OSLANGUAGE .. ".lang", pathToLang)
-  getFromGitHubSafely(GitHubUserUrl .. "IgorTimofeev/OpenComputers/master/MineOS/License/" .. _G._OSLANGUAGE .. ".txt", "MineOS/System/OS/License.txt")
+  getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/master/Installer/" .. _G._OSLANGUAGE .. ".lang", pathToLang)
+  getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/master/MineOS/License/" .. _G._OSLANGUAGE .. ".txt", "MineOS/System/OS/License.txt")
   
   --Ставим язык
   lang = config.readAll(pathToLang)
