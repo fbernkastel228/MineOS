@@ -115,7 +115,7 @@ local function getFromPastebin(paste, filename)
   return cyka
 end
 
-local GitHubUserUrl = "https://raw.githubusercontent.com/"
+local GitHubUserUrl = ""
 
 local cyka
 print(" ")
@@ -194,11 +194,11 @@ if not fs.exists("MineOS/System/OS/Installer/OK.pic") or not fs.exists("MineOS/S
   --local response = getSafe(GitHubUserUrl .. "fbernkastel228/MineOS/raw/refs/heads/master/Applications.txt", "MineOS/System/OS/Applications.txt")
   
   local preLoadApi = {
-    { paste = "fbernkastel228/MineOS/raw/refs/heads/master/lib/config.lua", path = "lib/config.lua" },
-    { paste = "fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/Languages.pic", path = "MineOS/System/OS/Icons/Languages.pic" },
-    { paste = "fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/OK.pic", path = "MineOS/System/OS/Icons/OK.pic" },
-    { paste = "fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/Downloading.pic", path = "MineOS/System/OS/Icons/Downloading.pic" },
-    { paste = "fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/OS_Logo.pic", path = "MineOS/System/OS/Icons/OS_Logo.pic" },
+    { paste = "https://raw.githubusercontent.com/fbernkastel228/MineOS/refs/heads/master/lib/config.lua", path = "lib/config.lua" },
+    { paste = "https://github.com/fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/Languages.pic", path = "MineOS/System/OS/Icons/Languages.pic" },
+    { paste = "https://github.com/fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/OK.pic", path = "MineOS/System/OS/Icons/OK.pic" },
+    { paste = "https://github.com/fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/Downloading.pic", path = "MineOS/System/OS/Icons/Downloading.pic" },
+    { paste = "https://github.com/fbernkastel228/MineOS/raw/refs/heads/master/MineOS/Icons/OS_Logo.pic", path = "MineOS/System/OS/Icons/OS_Logo.pic" },
   }
 
   local countOfAll = #preLoadApi
@@ -216,7 +216,7 @@ if not fs.exists("MineOS/System/OS/Installer/OK.pic") or not fs.exists("MineOS/S
 
 end
 
-applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "fbernkastel228/MineOS/raw/refs/heads/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
+applications = seri.unserialize(getFromGitHubSafely(GitHubUserUrl .. "https://raw.githubusercontent.com/fbernkastel228/MineOS/refs/heads/master/Applications.txt", "MineOS/System/OS/Applications.txt"))
 
 _G.image = require("image")
 local config = require("config")
