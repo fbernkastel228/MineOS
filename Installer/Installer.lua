@@ -121,8 +121,8 @@ local GitHubRAWUrl = "https://github.com/"
 local cyka
 print(" ")
 cyka = "colorlib.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
-cyka = "image.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib" .. cyka, "lib/" .. cyka)
-cyka = "ECSAPI.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib" .. cyka, "lib/" .. cyka)
+cyka = "image.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
+cyka = "ECSAPI.lua"; print("Downloading must-have libraries (" .. cyka .. ")"); getFromGitHubSafely(GitHubCodeUrl .. "fbernkastel228/MineOS/refs/heads/master/lib/" .. cyka, "lib/" .. cyka)
 print(" ")
 print("Initialising libraries")
 print(" ")
